@@ -152,3 +152,51 @@ describe('Testes da função Dividir', () => {
     })
 
 })
+
+// POTÊNCIA
+
+describe('Testes da função Potencia', () => {
+
+    it('Potencia caso de teste 33', () => {
+        expect(service.Potencia(2, 3)).toBe(8)
+    })
+
+    it('Potencia caso de teste 34', () => {
+        expect(service.Potencia(5, 2)).toBe(25)
+    })
+
+    it('Potencia caso de teste 35', () => {
+        expect(service.Potencia(10, 0)).toBe(1)
+    })
+
+    it('Potencia caso de teste 36 - letras', () => {
+        expect(() => service.Potencia('batata', 2)).toThrow()
+    })
+
+})
+
+// RAIZ
+
+describe('Testes da função Raiz', () => {
+
+    it('Raiz caso de teste 37', () => {
+        expect(service.Raiz(25)).toBe(5)
+    })
+
+    it('Raiz caso de teste 38', () => {
+        expect(service.Raiz(100)).toBe(10)
+    })
+
+    it('Raiz caso de teste 39', () => {
+        expect(service.Raiz(0)).toBe(0)
+    })
+
+    it('Raiz caso de teste 40 - número negativo', () => {
+        expect(() => service.Raiz(-25)).toThrow()
+    })
+
+    it('Raiz caso de teste 41 - letras', () => {
+        expect(() => service.Raiz('batata')).toThrow()
+    })
+
+})

@@ -32,6 +32,22 @@ class Controller {
 
         res.status(200).send({ resultado })
     }
+
+    Potencia(req, res) {
+        const { num1, num2 } = req.body
+
+        const resultado = Service.Potencia(num1, num2)
+
+        res.status(200).send({ resultado })
+    }
+
+    Raiz(req, res) {
+        const { num1 } = req.body
+
+        const resultado = Service.Raiz(num1)
+
+        res.status(200).send({ resultado })
+    }
 }
 
 export default new Controller()
